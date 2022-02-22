@@ -1,0 +1,27 @@
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  background: var(--bg-clr-300);
+}
+
+@supports (backdrop-filter: blur(4px)) {
+  .nav {
+    backdrop-filter: blur(4px);
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0 0 0 / .4);
+}
+
+.closeBtn {
+  position: absolute;
+  top: .875rem;
+  left: -48px;
+  font-size: 2rem;
+}

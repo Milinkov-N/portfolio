@@ -3,6 +3,7 @@ import Logo from './Logo'
 import Button from './Button'
 import Wrapper from './Wrapper'
 import { HiMenu } from 'react-icons/hi'
+import SideNav from './SideNav'
 
 export default function Header() {
   return (
@@ -30,6 +31,7 @@ export default function Header() {
           <HiMenu />
         </Button>
       </Wrapper>
+      <SideNav />
     </header>
   )
 }

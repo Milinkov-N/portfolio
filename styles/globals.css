@@ -12,7 +12,8 @@
   --fsz-900: 2.5rem;
 
   /* ------- colors ------- */
-  --bg-clr: #130E16;
+  --bg-clr-300: #130e1675;
+  --bg-clr-400: #130E16;
   --gradient: linear-gradient(135deg, var(--primary-clr-400), var(--secondary-clr-400));
 
   --primary-clr-100: #DF075433;
@@ -58,10 +59,8 @@ body {
   margin: 0;
   font-family: 'Ubuntu', -apple-system, system-ui, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: var(--bg-clr);
+  background: var(--bg-clr-400);
   color: var(--white);
-  background: var(--bg-clr);
-
 }
 
 a {
