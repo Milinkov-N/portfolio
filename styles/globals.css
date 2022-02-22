@@ -1,9 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  /* ------- typography ------- */
+  --ff-ubuntu: 'Ubuntu', sans-serif;
+  --fsz-300: .875rem;
+  --fsz-400: 1rem;
+  --fsz-500: 1.125rem;
+  --fsz-600: 1.25rem;
+  --fsz-700: 1.5rem;
+  --fsz-800: 2rem;
+  --fsz-900: 2.5rem;
+
+  /* ------- colors ------- */
+  --bg-clr: #130E16;
+  --gradient: linear-gradient(135deg, var(--primary-clr-400), var(--secondary-clr-400));
+
+  --primary-clr-100: #DF075433;
+  --primary-clr-400: #DF0754;
+
+  --secondary-clr-100: #F171EC33;
+  --secondary-clr-400: #F171EC;
+
+  --accent-violet-clr-100: #7520FF33;
+  --accent-violet-clr-400: #7520FF;
+
+  --accent-blue-clr-100: #20AFFF33;
+  --accent-blue-clr-400: #20AFFF;
+
+  --html-clr-100: #FF6D0033;
+  --html-clr-400: #FF6D00;
+
+  --css-clr-100: #039BE533;
+  --css-clr-400: #039BE5;
+
+  --js-clr-100: #FFD60033;
+  --js-clr-400: #FFD600;
+
+  --ts-clr-100: #007ACC33;
+  --ts-clr-400: #007ACC;
+
+  --redux-clr-100: #7E57C233;
+  --redux-clr-400: #7E57C2;
+
+  --sass-clr-100: #F0629233;
+  --sass-clr-400: #F06292;
+
+  --white: #fff;
+  --black: #000;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Ubuntu', -apple-system, system-ui, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--bg-clr);
+  color: var(--white);
+  background: var(--bg-clr);
+
 }
 
 a {
@@ -13,4 +68,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+p, .text {
+  font-size: var(--fsz-400);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 1rem;
 }
