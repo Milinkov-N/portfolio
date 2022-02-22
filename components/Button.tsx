@@ -4,10 +4,10 @@ export interface IButton {
   variant?: 'primary' | 'white' | 'black' | 'icon'
   label?: string
   children?: ReactNode
-  OnClick?: () => void
+  onClick?: () => void
 }
 
-export default function Button({ className, variant, label, children, OnClick }: IButton) {
+export default function Button({ className, variant, label, children, onClick }: IButton) {
   let isIcon = false
   const btnClasses = ['btn']
 
@@ -36,7 +36,7 @@ export default function Button({ className, variant, label, children, OnClick }:
   )
 
   return (
-    <button className={ btnClasses.join(' ') } onClick={ OnClick }>
+    <button className={ btnClasses.join(' ') } onClick={ onClick }>
       { isIcon ? children : <TextNode /> }
     </button>
   )

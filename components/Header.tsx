@@ -4,8 +4,14 @@ import Button from './Button'
 import Wrapper from './Wrapper'
 import { HiMenu } from 'react-icons/hi'
 import SideNav from './SideNav'
+import { useState } from 'react'
 
 export default function Header() {
+  const [navIsOpened, setNavIsOpened] = useState(false)
+
+  const openNav = () => setNavIsOpened(true)
+  const closeNav = () => setNavIsOpened(false)
+
   return (
     <header className={ styles.header }>
       <Wrapper className={ styles.wrapper }>
@@ -26,12 +32,15 @@ export default function Header() {
         <Button
           className={ styles.burgerBtn }
           variant='icon'
-          OnClick={ () => console.log('lcik') }
+          onClick={ openNav }
         >
           <HiMenu />
         </Button>
       </Wrapper>
-      <SideNav />
+      <SideNav
+        show={ navIsOpened }
+        onClose={ closeNav }
+      />
     </header>
   )
 }

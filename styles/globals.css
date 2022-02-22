@@ -72,6 +72,13 @@ a {
   box-sizing: border-box;
 }
 
+#portal {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+}
+
 .wrapper {
   max-width: 1300px;
   padding: 0 50px;
