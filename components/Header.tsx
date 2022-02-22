@@ -2,6 +2,7 @@ import styles from 'styles/Header.module.css'
 import Logo from './Logo'
 import Button from './Button'
 import Wrapper from './Wrapper'
+import { HiMenu } from 'react-icons/hi'
 
 export default function Header() {
   return (
@@ -17,10 +18,17 @@ export default function Header() {
           </ul>
         </nav>
         <Button
-          className={ styles.btn }
+          className={ styles.contactBtn }
           variant='primary'
           label='Связаться'
         />
+        <Button
+          className={ styles.burgerBtn }
+          variant='icon'
+          OnClick={ () => console.log('lcik') }
+        >
+          <HiMenu />
+        </Button>
       </Wrapper>
     </header>
   )

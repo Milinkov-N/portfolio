@@ -1,4 +1,6 @@
 .header {
+  position: sticky;
+  top: 0;
   padding: 1rem 0;
 }
 
@@ -28,6 +30,32 @@
   color:var(--primary-clr-400);
 }
 
-.btn {
+.contactBtn {
   margin-left: auto;
+}
+
+.burgerBtn {
+  display: none;
+  font-size: 2rem;
+  margin-left: .5em;
+}
+
+@media screen and (max-width: 770px) {
+  .nav {
+    display: none;
+  }
+
+  .burgerBtn {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contactBtn {
+    display: none;
+  }
+
+  .burgerBtn {
+    margin-left: auto;
+  }
 }

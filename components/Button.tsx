@@ -1,12 +1,14 @@
 import { ReactNode } from 'react'
 export interface IButton {
   className?: string
-  variant?: 'primary' | 'white' | 'black'
+  variant?: 'primary' | 'white' | 'black' | 'icon'
   label?: string
   children?: ReactNode
+  OnClick?: () => void
 }
 
-export default function Button({ className, variant, label, children }: IButton) {
+export default function Button({ className, variant, label, children, OnClick }: IButton) {
+  let isIcon = false
   const btnClasses = ['btn']
 
   switch(variant) {
@@ -19,15 +21,23 @@ export default function Button({ className, variant, label, children }: IButton)
     case 'black':
       btnClasses.push('btn-black')
       break;
+    case 'icon':
+      btnClasses.push('btn-icon')
+      isIcon = true
+      break;
   }
 
   className && btnClasses.push(className)
 
+  const TextNode = () => (
+    <span>
+      { children ? children : label }
+    </span>
+  )
+
   return (
-    <button className={ btnClasses.join(' ') }>
-      <span>
-        { children ? children : label }
-      </span>
+    <button className={ btnClasses.join(' ') } onClick={ OnClick }>
+      { isIcon ? children : <TextNode /> }
     </button>
   )
 }

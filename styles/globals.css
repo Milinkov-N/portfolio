@@ -86,7 +86,7 @@ a {
   font-family: var(--ff-ubuntu);
   font-size: 1rem;
   color: var(--black);
-  padding: .5em 2em;
+  padding: .5em 1.5em;
   cursor: pointer;
 }
 
@@ -124,6 +124,15 @@ a {
   transform: scale(20);
 }
 
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  color: var(--white);
+}
+
 p, .text {
   font-size: var(--fsz-400);
   font-weight: 400;
@@ -140,4 +149,16 @@ p, .text {
   font-size: var(--fsz-700);
   font-weight: 600;
   letter-spacing:.75px;
+}
+
+@media screen and (max-width: 720px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wrapper {
+    padding: 0 15px;
+  }
 }
