@@ -77,3 +77,13 @@ p, .text {
   margin: 0;
   margin-bottom: 1rem;
 }
+
+.primary-clr {
+  color: var(--primary-clr-400);
+}
+
+.logo {
+  font-size: var(--fsz-700);
+  font-weight: 600;
+  letter-spacing:.75px;
+}
