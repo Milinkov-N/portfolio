@@ -70,6 +70,12 @@ a {
   box-sizing: border-box;
 }
 
+.wrapper {
+  max-width: 1300px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
 p, .text {
   font-size: var(--fsz-400);
   font-weight: 400;
