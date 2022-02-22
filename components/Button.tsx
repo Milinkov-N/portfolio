@@ -1,13 +1,17 @@
 import { ReactNode } from 'react'
+
+type Variants = 'primary' | 'white' | 'black' | 'icon' | 'text'
 export interface IButton {
   className?: string
-  variant?: 'primary' | 'white' | 'black' | 'icon'
+  as?: 'link'
+  href?: string
+  variant?: Variants
   label?: string
   children?: ReactNode
   onClick?: () => void
 }
 
-export default function Button({ className, variant, label, children, onClick }: IButton) {
+export default function Button({ className, as, href, variant, label, children, onClick }: IButton) {
   let isIcon = false
   const btnClasses = ['btn']
 
@@ -25,6 +29,9 @@ export default function Button({ className, variant, label, children, onClick }:
       btnClasses.push('btn-icon')
       isIcon = true
       break;
+    case 'text':
+      btnClasses.push('btn-text')
+      break;
   }
 
   className && btnClasses.push(className)
@@ -35,9 +42,24 @@ export default function Button({ className, variant, label, children, onClick }:
     </span>
   )
 
-  return (
-    <button className={ btnClasses.join(' ') } onClick={ onClick }>
+  const AsLink = () => (
+    <a
+      className={ btnClasses.join(' ') }
+      onClick={ onClick }
+      href={ href }
+    >
+      { isIcon ? children : <TextNode /> }
+    </a>
+  )
+
+  const AsButton = () => (
+    <button
+      className={ btnClasses.join(' ') }
+      onClick={ onClick }
+    >
       { isIcon ? children : <TextNode /> }
     </button>
   )
+
+  return as === 'link' ? <AsLink /> : <AsButton />
 }

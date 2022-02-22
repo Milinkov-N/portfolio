@@ -139,6 +139,12 @@ a {
   color: var(--white);
 }
 
+.btn-text {
+  padding: 0;
+  background: transparent;
+  color: var(--white);
+}
+
 p, .text {
   font-size: var(--fsz-400);
   font-weight: 400;

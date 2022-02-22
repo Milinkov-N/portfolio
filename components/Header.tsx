@@ -5,6 +5,7 @@ import Wrapper from './Wrapper'
 import { HiMenu } from 'react-icons/hi'
 import SideNav from './SideNav'
 import { useState } from 'react'
+import Dropdown from './Dropdown'
 
 export default function Header() {
   const [navIsOpened, setNavIsOpened] = useState(false)
@@ -18,10 +19,18 @@ export default function Header() {
         <Logo />
         <nav className={ styles.nav }>
           <ul>
-            <li><a href='#home'>Главная</a></li>
-            <li><a href='#about'>Обо мне</a></li>
-            <li><a href='#skills'>Навыки</a></li>
-            <li><a href='#projects'>Проекты</a></li>
+            <li>
+              <a href='#home'>Главная</a>
+            </li>
+            <li>
+              <a href='#about'>Обо мне</a>
+            </li>
+            <li>
+              <a href='#skills'>Навыки</a>
+            </li>
+            <li>
+              <Dropdown />
+            </li>
           </ul>
         </nav>
         <Button
