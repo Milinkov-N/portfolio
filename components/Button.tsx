@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ReactNode } from 'react'
 
 type Variants = 'primary' | 'white' | 'black' | 'icon' | 'text'
@@ -43,13 +44,14 @@ export default function Button({ className, as, href, variant, label, children, 
   )
 
   const AsLink = () => (
-    <a
-      className={ btnClasses.join(' ') }
-      onClick={ onClick }
-      href={ href }
-    >
-      { isIcon ? children : <TextNode /> }
-    </a>
+    <Link href={ href ? href : '/' }>
+      <a
+        className={ btnClasses.join(' ') }
+        onClick={ onClick }
+      >
+        { isIcon ? children : <TextNode /> }
+      </a>
+    </Link>
   )
 
   const AsButton = () => (
