@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 
-interface IWrapper {
+export interface IWrapper {
   className?: string
   children?: ReactNode
 }

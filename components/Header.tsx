@@ -16,7 +16,11 @@ export default function Header() {
             <li><a href='#projects'>Проекты</a></li>
           </ul>
         </nav>
-        <Button className={ styles.btn } label='Связаться' />
+        <Button
+          className={ styles.btn }
+          variant='primary'
+          label='Связаться'
+        />
       </Wrapper>
     </header>
   )

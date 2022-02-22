@@ -47,6 +47,9 @@
 
   --white: #fff;
   --black: #000;
+
+  /* ------- other ------- */
+  --border-radius-400: 8px; 
 }
 
 html,
@@ -74,6 +77,51 @@ a {
   max-width: 1300px;
   padding: 0 50px;
   margin: 0 auto;
+}
+
+.btn {
+  background: var(--white);
+  border: none;
+  border-radius: var(--border-radius-400);
+  font-family: var(--ff-ubuntu);
+  font-size: 1rem;
+  color: var(--black);
+  padding: .5em 2em;
+  cursor: pointer;
+}
+
+.btn span {
+  position: relative;
+}
+
+.btn-primary {
+  position: relative;
+  background: var(--gradient);
+  border: none;
+  color: var(--white);
+  overflow: hidden;
+  transition: .2s color ease-in-out;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  bottom: -10px;
+  width: 30px;
+  height: 30px;
+  background: var(--white);
+  border-radius: 50%;
+  transition: .3s transform ease-in-out;
+  transform: scale(0);
+}
+
+.btn-primary:hover {
+  color: var(--black);
+}
+
+.btn-primary:hover::before {
+  transform: scale(20);
 }
 
 p, .text {
