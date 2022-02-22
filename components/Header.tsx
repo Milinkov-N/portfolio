@@ -35,6 +35,8 @@ export default function Header() {
         </nav>
         <Button
           className={ styles.contactBtn }
+          as='link'
+          href='#contact'
           variant='primary'
           label='Связаться'
         />
