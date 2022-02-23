@@ -19,8 +19,8 @@
   --primary-clr-100: #DF075433;
   --primary-clr-400: #DF0754;
 
-  --secondary-clr-100: #F171EC33;
-  --secondary-clr-400: #F171EC;
+  --secondary-clr-100: #b425d833;
+  --secondary-clr-400: #b425d8;
 
   --accent-violet-clr-100: #7520FF33;
   --accent-violet-clr-400: #7520FF;
@@ -70,13 +70,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-#portal {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 9999;
 }
 
 .wrapper {
