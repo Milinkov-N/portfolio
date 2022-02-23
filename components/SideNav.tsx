@@ -13,7 +13,7 @@ export default function SideNav({ show, onClose }: SideNavProps) {
     <Portal selector='#portal'>
       <AnimatePresence>
         { show && (
-          <>
+          <div style={{ position: 'fixed', inset: 0 }}>
             <motion.div
               className={ styles.overlay }
               initial={{ opacity: 0 }}
@@ -86,7 +86,7 @@ export default function SideNav({ show, onClose }: SideNavProps) {
                 </Button>
               </nav>
             </motion.div>
-          </>
+          </div>
         )}
       </AnimatePresence>
     </Portal>
