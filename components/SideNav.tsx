@@ -20,6 +20,7 @@ export default function SideNav({ show, onClose }: SideNavProps) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
+              onClick={ onClose }
             />
 
             <motion.div
@@ -30,11 +31,51 @@ export default function SideNav({ show, onClose }: SideNavProps) {
             >
               <nav className={ styles.nav }>
                 <ul>
-                  <li><a href='#home'>Главная</a></li>
-                  <li><a href='#about'>Обо мне</a></li>
-                  <li><a href='#skills'>Навыки</a></li>
-                  <li><a href='#projects'>Проекты</a></li>
-                  <li><a href='#contact'>Связаться</a></li>
+                  <li>
+                    <Button
+                      as='link'
+                      href='/'
+                      variant='text'
+                      label='Главная'
+                      onClick={ onClose }
+                    />
+                  </li>
+                  <li>
+                    <Button
+                      as='link'
+                      href='#about'
+                      variant='text'
+                      label='Обо мне'
+                      onClick={ onClose }
+                    />
+                  </li>
+                  <li>
+                    <Button
+                      as='link'
+                      href='#skills'
+                      variant='text'
+                      label='Навыки'
+                      onClick={ onClose }
+                    />
+                  </li>
+                  <li>
+                    <Button
+                      as='link'
+                      href='#projects'
+                      variant='text'
+                      label='Проекты'
+                      onClick={ onClose }
+                    />
+                  </li>
+                  <li>
+                    <Button
+                      as='link'
+                      href='#contact'
+                      variant='text'
+                      label='Связаться'
+                      onClick={ onClose }
+                    />
+                  </li>
                 </ul>
                 <Button
                   className={ styles.closeBtn }
