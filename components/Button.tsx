@@ -1,14 +1,12 @@
 import Link from 'next/link'
-import { ReactNode } from 'react'
+import { ComponentPropsWithoutRef } from 'react'
 
-type Variants = 'primary' | 'white' | 'black' | 'icon' | 'text'
-export interface IButton {
-  className?: string
+type ButtonVariants = 'primary' | 'white' | 'black' | 'icon' | 'text'
+export interface IButton extends ComponentPropsWithoutRef<'button'> {
   as?: 'link'
   href?: string
-  variant?: Variants
+  variant?: ButtonVariants
   label?: string
-  children?: ReactNode
   onClick?: () => void
 }
 

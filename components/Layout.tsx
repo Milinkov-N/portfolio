@@ -9,7 +9,7 @@ export default function Layout({ children }: ILayout) {
   return (
     <div className='layout'>
       <Header />
-      <main>
+      <main style={{ marginTop: '80px' }}>
         { children }
       </main>
     </div>
