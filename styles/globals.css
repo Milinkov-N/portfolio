@@ -59,6 +59,8 @@ body {
   margin: 0;
   font-family: 'Ubuntu', -apple-system, system-ui, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: var(--bg-clr-400);
   color: var(--white);
 }
@@ -98,6 +100,14 @@ section {
 
 .grid-col-2 {
   grid-template-columns: 1fr 1fr;
+}
+
+.flex {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
 }
 
 .ai-center {
@@ -164,6 +174,19 @@ section {
   color: var(--white);
 }
 
+.btn-small {
+  padding: .5em 1.5em;
+}
+
+.btn-medium {
+  font-size: 1.125rem;
+  padding: .675em 2em;
+}
+
+.btn-large {
+  padding: .5em 1.5em;
+}
+
 .heading-1 {
   font-size: var(--fsz-900);
   font-weight: 600;
@@ -198,6 +221,13 @@ p, .text {
   line-height: 1.5;
   margin: 0;
   margin-bottom: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary-clr-400), var(--secondary-clr-400));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .primary-clr {

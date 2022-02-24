@@ -6,11 +6,12 @@ export interface IButton extends ComponentPropsWithoutRef<'button'> {
   as?: 'link'
   href?: string
   variant?: ButtonVariants
+  size?: 'small' | 'medium' | 'large'
   label?: string
   onClick?: () => void
 }
 
-export default function Button({ className, as, href, variant, label, children, onClick }: IButton) {
+export default function Button({ className, as, href, variant, size, label, children, onClick }: IButton) {
   let isIcon = false
   const btnClasses = ['btn']
 
@@ -30,6 +31,21 @@ export default function Button({ className, as, href, variant, label, children, 
       break;
     case 'text':
       btnClasses.push('btn-text')
+      break;
+    default:
+      btnClasses.push('btn-primary')
+      break;
+  }
+
+  switch (size) {
+    case 'small':
+      btnClasses.push('btn-small')
+      break;
+    case 'medium':
+      btnClasses.push('btn-medium')
+      break;
+    case 'large':
+      btnClasses.push('btn-large')
       break;
   }
 
