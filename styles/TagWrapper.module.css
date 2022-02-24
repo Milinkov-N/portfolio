@@ -11,3 +11,39 @@
   padding: 1rem 0;
   padding-left: 3rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .tag {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .tag {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding: .5rem 0;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .tag {
+    font-size: 1.375rem;
+  }
+
+  .content {
+    padding: .5rem 0;
+    padding-left: 1rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: .875rem;
+  }
+}

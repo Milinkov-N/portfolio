@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className='hero'>
+    <section className={ styles.hero }>
       <Wrapper>
         <div className={ styles.bgCircle } />
         <div className={ styles.grid }>

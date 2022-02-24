@@ -27,22 +27,35 @@
 }
 
 @media screen and (max-width: 1310px) {
+  .hero {
+    padding: 100px 0;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    /* justify-content: center; */
   }
 
   .illustration {
     display: none;
   }
-}
 
-@media screen and (max-width: 975px) {
   .bgCircle {
     left: unset;
     right: 0;
     transform: translateX(50%);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .bgCircle {
+    width: 480px;
+    height: 480px;
+    filter: blur(135px);
   }
 }
