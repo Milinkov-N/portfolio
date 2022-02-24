@@ -53,6 +53,10 @@
   --border-radius-400: 8px; 
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -70,9 +74,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 main {
   position: relative;
@@ -83,6 +84,10 @@ main {
 section {
   padding: 50px 0;
 }
+
+/*
+*   ----------- UTILITY CLASSES -----------
+*/
 
 .wrapper {
   max-width: 1300px;
@@ -113,6 +118,22 @@ section {
 .ai-center {
   align-items: center;
 }
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary-clr-400), var(--secondary-clr-400));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.primary-clr {
+  color: var(--primary-clr-400);
+}
+
+
+/*
+*   ----------- UI AND LAYOUT -----------
+*/
 
 .btn {
   background: var(--white);
@@ -221,17 +242,6 @@ p, .text {
   line-height: 1.5;
   margin: 0;
   margin-bottom: 1rem;
-}
-
-.gradient-text {
-  background: linear-gradient(45deg, var(--primary-clr-400), var(--secondary-clr-400));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.primary-clr {
-  color: var(--primary-clr-400);
 }
 
 .logo {
