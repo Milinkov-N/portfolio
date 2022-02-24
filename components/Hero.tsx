@@ -9,8 +9,9 @@ export default function Hero() {
   return (
     <section className='hero'>
       <Wrapper>
-        <div className='grid grid-col-2'>
-          <TagWrapper tag='Web-Developer'>
+        <div className={ styles.bgCircle } />
+        <div className={ styles.grid }>
+          <TagWrapper className={ styles.tagWrapper } tag='Web-Developer'>
             <Heading
               as='h1'
               level={ 1 }
@@ -20,11 +21,10 @@ export default function Hero() {
               Специализируюсь на создании UI/UX, разработке адаптивных и современных вебсайтов
             </p>
           </TagWrapper>
-          <div>
+          <div className={ styles.illustration }>
             <Image src={ ProgrammerPic } />
           </div>
         </div>
-        
       </Wrapper>
     </section>
   )

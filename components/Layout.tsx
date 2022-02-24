@@ -9,8 +9,12 @@ export default function Layout({ children }: ILayout) {
   return (
     <div className='layout'>
       <Header />
-      <main style={{ marginTop: '80px' }}>
+      <main>
         { children }
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
       </main>
     </div>
   )

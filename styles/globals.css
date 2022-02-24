@@ -16,7 +16,7 @@
   --bg-clr-400: #130E16;
   --gradient: linear-gradient(135deg, var(--primary-clr-400), var(--secondary-clr-400));
 
-  --primary-clr-100: #DF075433;
+  --primary-clr-100: #df075369;
   --primary-clr-400: #DF0754;
 
   --secondary-clr-100: #b425d833;
@@ -72,10 +72,36 @@ a {
   box-sizing: border-box;
 }
 
+main {
+  position: relative;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+section {
+  padding: 50px 0;
+}
+
 .wrapper {
   max-width: 1300px;
   padding: 0 50px;
   margin: 0 auto;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ai-center {
+  align-items: center;
 }
 
 .btn {
