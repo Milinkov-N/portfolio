@@ -1,0 +1,134 @@
+.gridContent {
+  display: grid;
+  grid-template-areas: 
+    'left-area left-area left-area left-area react-logo right-area right-area right-area right-area';
+  height: 23.75rem;
+  padding: 0 100px;
+}
+
+.contentAreaLeft {
+  position: relative;
+  grid-area: left-area;
+}
+
+.reactLogo {
+  grid-area: react-logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentAreaRight {
+  position: relative;
+  grid-area: right-area;
+}
+
+.smallLogo {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallLogo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+}
+
+#htmlLogo {
+  left: 0;
+  bottom: 40%
+}
+
+#htmlLogo::before {
+  background: var(--html-clr-100);
+}
+
+#cssLogo {
+  top: 0;
+  right: 14%;
+}
+
+#cssLogo::before {
+  background: var(--css-clr-100);
+}
+
+#jsLogo {
+  right: 0;
+  bottom: 12%;
+}
+
+#jsLogo::before {
+  background: var(--js-clr-100);
+}
+
+#sassLogo {
+  left: 15%;
+  bottom: 33%;
+}
+
+#sassLogo::before {
+  background: var(--sass-clr-100);
+}
+
+#reduxLogo {
+  top: 5%;
+  left: 50%;
+  transform: translateX(-40%);
+}
+
+#reduxLogo::before {
+  background: var(--redux-clr-100);
+}
+
+#tsLogo {
+  right: 0;
+  bottom: 10%;
+}
+
+#tsLogo::before {
+  background: var(--ts-clr-100);
+}
+
+@media screen and (max-width: 1200px) {
+  .gridContent {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .gridContent {
+    grid-template-areas:
+      'left-area'
+      'react-logo'
+      'right-area';
+    grid-template-rows: repeat(3, 200px);
+    max-width: 75%;
+    height: unset;
+    margin: 0 auto;
+  }
+
+  #cssLogo {
+    top: 0;
+    right: 34%;
+  }
+
+  #sassLogo {
+    left: 10%;
+    bottom: 20%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .gridContent {
+    max-width: unset;
+  }
+}
