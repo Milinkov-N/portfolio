@@ -11,10 +11,6 @@ export default function Layout({ children }: ILayout) {
       <Header />
       <main>
         { children }
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
       </main>
     </div>
   )
