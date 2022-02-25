@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Layout from 'components/Layout'
 import Hero from 'components/Hero'
 import TechStack from 'components/TechStack'
+import About from 'components/About'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <Layout>
         <Hero />
         <TechStack />
+        <About />
       </Layout>
     </>
   )
