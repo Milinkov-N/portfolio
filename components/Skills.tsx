@@ -30,11 +30,13 @@ export default function Skills() {
               />
               <Card
                 icon={ <HiOutlineCode /> }
+                iconColor='violet'
                 heading='Современный сайт'
                 desc='Быстрые и адаптивные вебсайты с адаптивной версткой и анимациями'
               />
               <Card
                 icon={ <HiOutlineGlobeAlt /> }
+                iconColor='blue'
                 heading='Deploy сайта'
                 desc='Если вам нужен простой некоомерческий проект, то я смогу выгрузить его на бесплатный хостинг'
               />
@@ -48,14 +50,15 @@ export default function Skills() {
 
 export interface ICard extends ComponentPropsWithoutRef<'div'> {
   icon: ReactNode
+  iconColor?: 'pink' | 'violet' | 'blue'
   heading: string
   desc: string
 }
 
-function Card({ icon, heading, desc, ...all }: ICard) {
+function Card({ icon, iconColor = 'pink', heading, desc, ...all }: ICard) {
   return (
     <div className={ styles.card } { ...all }>
-      <div className={ styles.cardIcon }>
+      <div className={ `${ styles.cardIcon } ${ styles[iconColor] }` }>
         { icon }
       </div>
       <h3 className='heading-4'>{ heading }</h3>
