@@ -7,9 +7,16 @@
 }
 
 .ellipse {
-  top: unset;
-  left: 10%;
-  bottom: -80%;
+  left: 0;
+  top: -20%;
+  transform: translateX(-50%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
 }
 
 .imageContainer {
@@ -43,4 +50,18 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1.375rem;
+}
+
+@media screen and (max-width: 950px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .imageContainer::before {
+    top: 6px;
+    right: -6px;
+  }
 }

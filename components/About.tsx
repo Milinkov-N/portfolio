@@ -10,16 +10,14 @@ export default function About() {
     <section className={ styles.aboutSection }>
       <Ellipse className={ styles.ellipse } color='secondary' />
       <Wrapper className={ styles.wrapper }>
-        <div className='grid grid-col-2'>
-          <div className="grid-elem profile-image">
-            <div className={ styles.imageContainer }>
-              <div className={ styles.imageWrapper }>
-                <Image
-                  src={ profileImage }
-                  layout='fill'
-                  objectFit='cover'
-                />
-              </div>
+        <div className={ styles.grid }>
+          <div className={ styles.imageContainer }>
+            <div className={ styles.imageWrapper }>
+              <Image
+                src={ profileImage }
+                layout='fill'
+                objectFit='cover'
+              />
             </div>
           </div>
           <div className={ styles.content }>
@@ -28,7 +26,6 @@ export default function About() {
               <p>Я - начинающий Веб-разработчик, со средним профессиональным образованием в сфере информационных технологий.</p>
               <p>Моя специальность - создание лендингов, e-commerce сайтов и SPA (Single Page Application) с современным дизайном и с использованием не менее современных инструментов, таких как React, Next.js, TypeScript, Redux, Framer Motion.</p>
             </div>
-            
             <Button size='medium' label='Моя анкета на hh.ru' />
           </div>
         </div>
