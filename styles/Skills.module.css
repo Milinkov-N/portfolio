@@ -1,0 +1,148 @@
+.skillsSection {
+  padding: 200px 0;
+}
+
+.background {
+  max-width: 1300px;
+  background: var(--gradient);
+  border-radius: 15px;
+  padding: 42px 0;
+  margin: 0 auto;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  align-items: flex-start;
+}
+
+.description {
+  position: relative;
+  max-width: 450px;
+  font-weight: 300;
+  padding-left: 1.125rem;
+  margin-bottom: 2em;
+}
+
+.description::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 105%;
+  background: #FF77B0;
+  border-radius: 20px;
+}
+
+.cardsArea {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.card {
+  width: 245px;
+  min-height: 295px;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--white);
+  color: var(--black);
+}
+
+#uiCard {
+  grid-row: 1 / span 3;
+}
+
+.cardIcon {
+  display: inline-block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF77B0;
+  font-size: 2.5rem;
+  line-height: .75;
+  width: 64px;
+  height: 64px;
+  background: #ff77b033;
+  border-radius: 50%;
+  margin-top: .25em;
+  margin-bottom: .75em;
+}
+
+/* .cardIcon::before {
+  content: '';
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+} */
+
+.cardIcon svg {
+  position: relative;
+}
+
+@media screen and (max-width: 1075px) {
+  .skillsSection {
+    padding: 50px 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cardsArea {
+    position: unset;
+    right: unset;
+    bottom: unset;
+    transform: unset;
+    grid-template-columns: repeat(3, 245px);
+    justify-content: center;
+  }
+
+  #uiCard {
+    grid-row: unset;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .cardsArea {
+    grid-template-columns: repeat(2, 245px);
+  }
+
+  .card:last-child {
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .cardsArea {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+
+  .card:last-child {
+    grid-column: unset;
+  }
+}
