@@ -85,15 +85,6 @@
   margin-bottom: .75em;
 }
 
-/* .cardIcon::before {
-  content: '';
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-} */
-
 .cardIcon svg {
   position: relative;
 }

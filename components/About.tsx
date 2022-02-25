@@ -26,7 +26,7 @@ export default function About() {
               <p>Я - начинающий Веб-разработчик, со средним профессиональным образованием в сфере информационных технологий.</p>
               <p>Моя специальность - создание лендингов, e-commerce сайтов и SPA (Single Page Application) с современным дизайном и с использованием не менее современных инструментов, таких как React, Next.js, TypeScript, Redux, Framer Motion.</p>
             </div>
-            <Button size='medium' label='Моя анкета на hh.ru' />
+            <Button size='large' label='Моя анкета на hh.ru' />
           </div>
         </div>
       </Wrapper>
