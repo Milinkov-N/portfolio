@@ -9,7 +9,6 @@ import SassLogo from 'public/sass.png'
 import TSLogo from 'public/typescript.svg'
 import ReactLogo from 'public/logo512.png'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
 
 export default function TechStack() {
   return (
@@ -46,8 +45,6 @@ export default function TechStack() {
               /> 
             </motion.div>
           </div>
-          
-          
 
           <div className={ styles.contentAreaRight }>
             <TechLogo
@@ -72,7 +69,6 @@ export default function TechStack() {
     </section>
   )
 }
-
 export interface ITechLogo {
   className?: string
   id?: string
@@ -81,47 +77,11 @@ export interface ITechLogo {
 }
 
 function TechLogo ({ className, id, icon, typescript = false }: ITechLogo) {
-  const initialState = 48
-  const [imageSize, setImageSize] = useState(initialState)
-
-  const imageSizes = {
-    scaled: 72,
-    typescriptInitial: 36,
-    typescriptScaled: 56
-  }
-
-  const scaleImage = () => {
-    if (typescript) {
-      setImageSize(imageSizes.typescriptScaled)
-    } else {
-      setImageSize(imageSizes.scaled)
-    }    
-  }
-
-  const unscaleImage = () => {
-    if (typescript) {
-      setImageSize(imageSizes.typescriptInitial)
-    } else {
-      setImageSize(initialState)
-    }
-  }
-
-  useEffect(() => {
-    if (typescript) setImageSize(imageSizes.typescriptInitial)
-  }, [])
+  const imageSize = typescript ? 36 : 48
 
   return (
-    <div
-      className={ className }
-      id={ id }
-      onMouseEnter={ scaleImage }
-      onMouseLeave={ unscaleImage }
-    >
-      <motion.div
-        animate={{ width: imageSize, height: imageSize }}
-      >
-        <Image src={ icon } width='100%' height='100%' /> 
-      </motion.div>
+    <div className={ className } id={ id }>
+      <Image src={ icon } width={ imageSize } height={ imageSize } /> 
     </div>
   )
 }

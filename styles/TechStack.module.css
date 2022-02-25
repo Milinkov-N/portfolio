@@ -41,11 +41,6 @@
   width: inherit;
   height: inherit;
   border-radius: 50%;
-  transition: .2s transform ease-in-out;
-}
-
-.smallLogo:hover::before {
-  transform: translate(-50%, -50%) scale(.75);
 }
 
 #htmlLogo {
