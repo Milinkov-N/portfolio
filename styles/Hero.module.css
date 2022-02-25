@@ -14,15 +14,9 @@
 }
 
 .bgCircle {
-  position: absolute;
   top: -50px;
   left: 65%;
   transform: translateX(-50%);
-  width: 650px;
-  height: 650px;
-  background: var(--primary-clr-100);
-  border-radius: 50%;
-  filter: blur(200px);
 }
 
 .buttonLinks {
@@ -82,12 +76,6 @@
 @media screen and (max-width: 720px) {
   .hero {
     padding: 60px 0;
-  }
-
-  .bgCircle {
-    width: 480px;
-    height: 480px;
-    filter: blur(135px);
   }
 }
 

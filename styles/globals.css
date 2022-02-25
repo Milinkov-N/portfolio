@@ -250,6 +250,15 @@ p, .text {
   letter-spacing: .75px;
 }
 
+.ellipse {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  background: var(--primary-clr-100);
+  border-radius: 50%;
+  filter: blur(200px);
+}
+
 @media screen and (max-width: 900px) {
   .heading-1 {
     font-size: 2.75rem;
@@ -267,6 +276,12 @@ p, .text {
 
   p, .text {
     font-size: .875rem;
+  }
+
+  .ellipse {
+    width: 480px;
+    height: 480px;
+    filter: blur(135px);
   }
 }
 

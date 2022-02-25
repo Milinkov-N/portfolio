@@ -1,0 +1,46 @@
+.aboutSection {
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.ellipse {
+  top: unset;
+  left: 10%;
+  bottom: -80%;
+}
+
+.imageContainer {
+  position: relative;
+  max-width: 380px;
+  height: 327px;
+  border-radius: 18px;
+}
+
+.imageContainer::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  right: -11px;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-clr-400);
+  border-radius: inherit;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.375rem;
+}

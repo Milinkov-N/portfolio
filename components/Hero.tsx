@@ -5,12 +5,13 @@ import ProgrammerPic from'public/undraw_programming.svg'
 import Wrapper from './Wrapper'
 import Image from 'next/image'
 import Button from './Button'
+import Ellipse from './Ellipse'
 
 export default function Hero() {
   return (
     <section className={ styles.hero }>
       <Wrapper>
-        <div className={ styles.bgCircle } />
+        <Ellipse className={ styles.bgCircle } color='primary' />
         <div className={ styles.grid }>
           <div className={ styles.content }>
             <TagWrapper className={ styles.tagWrapper } tag='Web-Developer'>
