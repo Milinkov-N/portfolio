@@ -67,6 +67,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-clr-400);
   color: var(--white);
+  scroll-behavior: smooth;
 }
 
 a {
@@ -88,6 +89,10 @@ section {
 /*
 *   ----------- UTILITY CLASSES -----------
 */
+
+.no-scroll {
+  overflow: hidden;
+}
 
 .wrapper {
   max-width: 1300px;

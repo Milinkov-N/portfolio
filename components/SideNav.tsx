@@ -3,12 +3,20 @@ import { HiOutlineX } from 'react-icons/hi'
 import Portal from './Portal'
 import Button from './Button'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect } from 'react'
 export interface SideNavProps {
   show: boolean
   onClose: () => void
 }
 
 export default function SideNav({ show, onClose }: SideNavProps) {
+  
+  useEffect(() => {
+    document.body.classList.remove('no-scroll')
+
+    show && document.body.classList.add('no-scroll')
+  }, [show])
+
   return (
     <Portal selector='#portal'>
       <AnimatePresence>
