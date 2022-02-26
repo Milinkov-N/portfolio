@@ -277,6 +277,9 @@ p, .text {
 }
 
 @media screen and (max-width: 720px) {
+  section {
+    padding: 25px 0;
+  }
   .wrapper {
     padding: 0 25px;
   }

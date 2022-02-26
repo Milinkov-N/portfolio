@@ -5,6 +5,7 @@ import Hero from 'components/Hero'
 import TechStack from 'components/TechStack'
 import About from 'components/About'
 import Skills from 'components/Skills'
+import Projects from 'components/Projects'
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <TechStack />
         <About />
         <Skills />
+        <Projects />
       </Layout>
     </>
   )
