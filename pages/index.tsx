@@ -6,6 +6,7 @@ import TechStack from 'components/TechStack'
 import About from 'components/About'
 import Skills from 'components/Skills'
 import Projects from 'components/Projects'
+import Contact from 'components/Contact'
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </Layout>
     </>
   )

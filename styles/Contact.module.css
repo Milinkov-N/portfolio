@@ -1,0 +1,57 @@
+.ellipse {
+  
+}
+
+.wrapper {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  max-width: 500px;
+  height: 375px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.25rem;
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.input {
+  font-family: system-ui, var(--ff-ubuntu), sans-serif;
+  font-size: 1rem;
+  padding: .875em;
+  border: none;
+  border-radius: var(--border-radius-400);
+}
+
+.textArea {
+  grid-column: 1 / span 2;
+  min-height: 175px;
+  max-height: 375px;
+  resize: vertical;
+}
+
+.submitBtn {
+  grid-column: 1 / span 2;
+}
+
+.submitBtn:hover::before {
+  transform: scale(40);
+}
