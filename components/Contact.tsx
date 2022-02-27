@@ -29,19 +29,36 @@ export default function Contact() {
               label='Связаться со мной'
             />
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, quaerat debitis quibusdam odit eos delectus ut similique unde soluta pariatur nihil sint? Autem fugit quis quaerat exercitationem velit laboriosam, ab, voluptatum sunt unde eius tempora!</p>
-            <form className={ styles.contactForm } action="">
+            <form
+              className={ styles.contactForm } 
+              action='https://formsubmit.co/milinkov.nik@gmail.com'
+              method='POST'
+            >
+              <input
+                type='hidden'
+                name='_template'
+                value='table'
+              />
+              <input
+                type='hidden'
+                name='_subject'
+                value='Новый отклик на сайте портфолио'
+              />
               <input
                 className={ styles.input }
+                name='name'
                 type='text'
                 placeholder='Никита'
               />
               <input
                 className={ styles.input }
+                name='email'
                 type='email'
                 placeholder='example@gmail.com'
               />
               <textarea
                 className={ `${ styles.input } ${ styles.textArea }` }
+                name='message'
                 placeholder='Ваше сообщение'
               />
               <Button
