@@ -79,7 +79,6 @@ a {
 main {
   position: relative;
   padding-top: 80px;
-  overflow: hidden;
 }
 
 section {
@@ -91,6 +90,10 @@ section {
 */
 
 .no-scroll {
+  overflow: hidden;
+}
+
+.layout {
   overflow: hidden;
 }
 
