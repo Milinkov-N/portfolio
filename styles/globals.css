@@ -124,6 +124,10 @@ section {
   align-items: center;
 }
 
+.gap-sm {
+  gap: .75rem;
+}
+
 .gradient-text {
   background: linear-gradient(45deg, var(--primary-clr-400), var(--secondary-clr-400));
   background-clip: text;
