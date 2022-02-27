@@ -2,8 +2,22 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1rem 0;
+  padding: 2rem 0;
   z-index: 9999;
+  transition: .2s all ease-in-out;
+}
+
+.headerFixed {
+  background: var(--bg-clr-300);
+  backdrop-filter: blur(6px);
+  padding: 1rem 0;
+}
+
+
+@supports (backdrop-filter: blur(6px)) {
+  .headerFixed {
+    backdrop-filter: blur(6px);
+  }
 }
 
 .wrapper {

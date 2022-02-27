@@ -13,8 +13,16 @@ export default function Header() {
   const openNav = () => setNavIsOpened(true)
   const closeNav = () => setNavIsOpened(false)
 
+  const fixOnScroll = (element: HTMLElement) => {
+    window.onscroll = () => {
+      window.scrollY === 0
+        ? element.classList.remove(styles.headerFixed)
+        : element.classList.add(styles.headerFixed)
+    }
+  }
+
   return (
-    <header className={ styles.header }>
+    <header ref={ fixOnScroll } className={ styles.header }>
       <Wrapper className={ styles.wrapper }>
         <Logo />
         <nav className={ styles.nav }>
